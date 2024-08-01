@@ -1,0 +1,14 @@
+<h2>Edit Product</h2>
+<form *ngIf="product" (ngSubmit)="updateProduct()">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="product.productName" name="name" required>
+  
+  <label for="price">Price:</label>
+  <input id="price" type="number" [(ngModel)]="product.ProductPrice" name="price" required>
+  <label for="qty">Quantity:</label>
+  <input id="qty" type="number" [(ngModel)]="product.productQuantity" name="qty" required>
+  <label for="img">Product Image:</label>
+  <input id="img" type="file" [(ngModel)]="product.productImage" name="img" required>
+  <button class="btn btn-primary" type="submit">Update Product</button>
+</form>
+<a class="btn btn-warning" routerLink="/">Back to List</a>
